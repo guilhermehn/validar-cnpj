@@ -4,6 +4,7 @@ const weights = [
 	[5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2],
 	[6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2],
 ];
+
 /**
  * Valida um número de CNPJ baseado no algorítmo "módulo 11"
  * @param {String} input - Número de CNPJ a ser testado
