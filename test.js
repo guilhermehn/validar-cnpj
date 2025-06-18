@@ -22,4 +22,14 @@ describe('validarCnpj', () => {
 	it('should return true when the input is a valid cnpj and has formatting characters', () => {
 		assert.equal(validarCnpj('11.444.777/0001-61'), true);
 	});
+
+	describe('Alphanumeric values', () => {
+		it('should return true for valid cnpj with alphanumeric characters', () => {
+			assert.equal(validarCnpj('12.ABC.345/01DE-35'), true);
+		});
+
+		it('should return false for invalid cnpj with alphanumeric characters', () => {
+			assert.equal(validarCnpj('12.ABC.345/01DE-36'), false);
+		});
+	});
 });
