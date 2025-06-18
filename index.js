@@ -17,7 +17,10 @@ function validarCnpj(input) {
 		return false;
 	}
 
-	const cnpj = input.replace(/\D/g, '').trim();
+	const cnpj = input
+		.replace(/[^\d\w]/g, '')
+		.trim()
+		.toUpperCase();
 
 	if (cnpj === '' || cnpj.length !== 14 || isRepeatingNumber(cnpj)) {
 		return false;
@@ -27,7 +30,7 @@ function validarCnpj(input) {
 		let sum = 0;
 
 		for (let j = 0; j < weights[i].length; j++) {
-			sum += parseInt(cnpj[j]) * weights[i][j];
+			sum += parseInt(cnpj[j].charCodeAt(0) - 48) * weights[i][j];
 		}
 
 		sum %= 11;
