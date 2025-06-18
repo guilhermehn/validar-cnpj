@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "biome check .",
     "test": "node --test",
-    "prepare": "husky install",
+    "prepare": "husky",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "files": [
@@ -42,7 +42,7 @@
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "conventional-changelog-cli": "^4.0.0",
-    "husky": "^8.0.3",
+    "husky": "^9.1.7",
     "lint-staged": "^14.0.1"
   }
 }
