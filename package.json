@@ -4,7 +4,7 @@
   "description": "Validador de CNPJ",
   "main": "index.js",
   "scripts": {
-    "pretest": "eslint .",
+    "pretest": "biome check .",
     "test": "node --test",
     "prepare": "husky install",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
@@ -27,28 +27,9 @@
     "url": "https://github.com/guilhermehn/validar-cnpj/issues"
   },
   "license": "MIT",
-  "prettier": {
-    "singleQuote": true,
-    "useTabs": true
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "commonjs": true,
-      "es2021": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-      "ecmaVersion": "latest"
-    }
-  },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.md": [
-      "prettier --write"
+    "*": [
+      "biome check --no-errors-on-unmatched --files-ignore-unknown=true --write"
     ]
   },
   "commitlint": {
@@ -57,12 +38,11 @@
     ]
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "conventional-changelog-cli": "^4.0.0",
-    "eslint": "^8.48.0",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
-    "prettier": "^3.0.3"
+    "lint-staged": "^14.0.1"
   }
 }
