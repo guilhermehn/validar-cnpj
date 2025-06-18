@@ -1,3 +1,8 @@
+## 1.1.0 (2025-06-18)
+
+- feat: add support for alphanumeric values ([ae149d5](https://github.com/guilhermehn/validar-cnpj/commit/ae149d5))
+- chore: fix CHANGELOG.md ([6f2d075](https://github.com/guilhermehn/validar-cnpj/commit/6f2d075))
+
 ## 1.0.0 (2023-09-01)
 
 - chore: add files config ([3edf28c](https://github.com/guilhermehn/validar-cnpj/commit/3edf28c))
